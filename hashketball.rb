@@ -327,5 +327,29 @@ points2 = [0,"Charlotte Hornets"]
     end
 end
 
+def player_with_longest_name
+    max = [0,""]
+    max2 = [0,""]
 
+    # turn the players for one team into an array
+    # iterate over the name array
+
+    game_hash[:home][:players][0].keys.each do |x|
+        if max[0] < x.length
+            max[0] = x.length
+            max[1] = x.to_s
+        end
+    end
+    game_hash[:away][:players][0].keys.each do |x|
+        if max2[0] < x.length
+            max2[0] = x.length
+            max2[1] = x.to_s
+        end
+    end
+    if max[0] > max2[0]
+        max[1]
+    else
+        max2[1]
+    end
+end
 
