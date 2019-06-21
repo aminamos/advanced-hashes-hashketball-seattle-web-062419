@@ -270,7 +270,7 @@ playerstats = {}
             end   
         end
     end
-    p playerstats[:rebounds]
+    p playerstats[:rebounds].to_i
 end
 
 
