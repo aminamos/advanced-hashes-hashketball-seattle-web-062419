@@ -323,7 +323,6 @@ points2 = [0,"Charlotte Hornets"]
         p points2[1]
     end
 end
-binding.pry
 
 
 
