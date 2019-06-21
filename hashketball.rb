@@ -376,8 +376,10 @@ game_hash.each do |homeaway,teamdeets|
     end
 end
 
+#make comparison variable
 stealingplayer = playername
 
+#return the true or false
 p stealingplayer == playername
   
 end
