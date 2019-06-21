@@ -274,7 +274,7 @@ playerstats = {}
 end
 
 
-def most_points_scored
+def winning_team
 points1 = [0,"Brooklyn Nets"]
 points2 = [0,"Charlotte Hornets"]
     # open the hash
