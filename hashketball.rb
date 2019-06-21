@@ -273,6 +273,9 @@ playerstats = {}
     p playerstats[:rebounds].to_i
 end
 
+def most_points_scored
+  
+end
 
 def winning_team
 points1 = [0,"Brooklyn Nets"]
