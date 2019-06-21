@@ -353,3 +353,8 @@ def player_with_longest_name
     end
 end
 
+def long_name_steals_a_ton?
+  player = player_with_longest_name
+  binding.pry
+  
+end
