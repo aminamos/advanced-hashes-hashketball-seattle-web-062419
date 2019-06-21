@@ -242,7 +242,35 @@ newhash = {}
 end
 
 def big_shoe_rebounds
-  
+max = 0
+playerstats = {}
+
+    # open the hash
+    game_hash.each do |homeaway,teamdeets|
+        # enter team details hash
+        teamdeets.each do |deetkey,deetvalue|
+            # when the property == :players
+            if deetkey == :players
+                # open the player array
+                deetvalue.each do |x|
+                    # check hash index
+                    x.each do |namekey,stats|
+                        # open the stat hash
+                        stats.each do |statkey,statval|
+                            # when :shoe symbol is reached
+                            # add shoe value to shoe array
+                            if statkey == :shoe && statval.to_i > max
+                                max = statval.to_i
+                                playerstats = stats
+                            end
+                        end
+                    end
+                end
+                
+            end   
+        end
+    end
+    p playerstats[:rebounds]
 end
 
 
