@@ -354,8 +354,29 @@ def player_with_longest_name
 end
 
 def long_name_steals_a_ton?
-  player = player_with_longest_name
-  
-  binding.pry
+longnameplayer = player_with_longest_name
+max = 0
+playername = {}
+  # reuse code from big shoes rebounds
+  game_hash.each do |homeaway,teamdeets|
+      teamdeets.each do |deetkey,deetvalue|
+          if deetkey == :players
+              deetvalue.each do |x|
+                  x.each do |namekey,stats|
+                      stats.each do |statkey,statval|
+                          if statkey == :steals && statval.to_i > max
+                              max = statval.to_i
+                              playername = namekey.to_s
+                          end
+                      end
+                  end
+              end
+              
+          end   
+      end
+  end
+  p playername
+
+binding.pry
   
 end
