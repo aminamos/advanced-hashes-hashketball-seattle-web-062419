@@ -376,7 +376,8 @@ game_hash.each do |homeaway,teamdeets|
     end
 end
 
-binding.pry
 stealingplayer = playername
+
+p stealingplayer == playername
   
 end
